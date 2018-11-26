@@ -1,37 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const DrumPad = (props) => {
-  let audioClip = React.createRef();
-
-  let playClip = () => {
-    audioClip.current.currentTime = 0;
-    audioClip.current.play();
+export default class DrumPad extends Component {
+  constructor(props) {
+    super(props);
+    this.audioClip = React.createRef();
+    this.pad = React.createRef();
+    this.playClip = this.playClip.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
-  let handleKeyPress = (event) => {
-    if (event.key.toUpperCase() === props.keybind) {
-      playClip();
-      console.log('Pad ' + event.key.toUpperCase());
+  playClip() {
+    this.props.setLastPlayed(this.props.label);
+    this.audioClip.current.currentTime = 0;
+    this.audioClip.current.play();
+    this.pad.current.className = "drum-pad active";
+    setTimeout(() => {
+      this.pad.current.className = "drum-pad";
+    }, 200);
+  }
+
+  handleKeyPress(event) {
+    event.preventDefault();
+    if (event.key.toUpperCase() === this.props.keybind) {
+      this.playClip();
     }
   }
 
-  document.addEventListener('keypress', handleKeyPress);
-  
-  return (
-    <div 
-      className='drum-pad'
-      id={props.label} 
-      onClick={playClip}
-    >
-      {props.keybind}
+  componentDidMount() {
+    document.addEventListener('keypress', this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keypress', this.handleKeyPress);
+  }
+
+  render() {
+    return (
+      <div 
+        className='drum-pad'
+        id={this.props.label} 
+        onClick={this.playClip}
+        ref={this.pad}
+      >
+      {this.props.keybind}
       <audio 
         className='clip' 
-        id={props.keybind} 
-        src={props.src}
-        ref={audioClip}
+        id={this.props.keybind} 
+        src={this.props.src}
+        ref={this.audioClip}
       />
     </div>
-  );
-};
-
-export default DrumPad;
+    );
+  }
+}

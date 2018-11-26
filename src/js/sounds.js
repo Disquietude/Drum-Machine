@@ -11,8 +11,7 @@ import tom from '../sounds/tom.wav';
 const sounds = [
   {
     label: "Boom",
-    //src: boom,
-    src: "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/boom.wav",
+    src: boom,
     key: "Q"
   },
   {

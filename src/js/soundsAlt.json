@@ -1,0 +1,47 @@
+[
+  {
+    "label": "Boom",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/boom.wav",
+    "key": "Q"
+  },
+  {
+    "label": "Clap",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/clap.wav",
+    "key": "W"
+  },
+  {
+    "label": "Hi-Hat",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/hihat.wav",
+    "key": "E"
+  },
+  {
+    "label": "Kick",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/kick.wav",
+    "key": "A"
+  },
+  {
+    "label": "Open Hat",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/openhat.wav",
+    "key": "S"
+  },
+  {
+    "label": "Ride",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/ride.wav",
+    "key": "D"
+  },
+  {
+    "label": "Snare",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/snare.wav",
+    "key": "Z"
+  },
+  {
+    "label": "Tink",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tink.wav",
+    "key": "X"
+  },
+  {
+    "label": "Tom",
+    "src": "https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tom.wav",
+    "key": "C"
+  }
+]
