@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Display from './Display';
 import DrumPad from './DrumPad';
 
-//import sounds from '../sounds';
-import sounds from '../soundsAlt.json';
+import sounds from '../sounds';
 
 export default class DrumMachine extends Component {
   constructor(props) {
